@@ -1,0 +1,2 @@
+event_id,type,timestamp_s,frame_idx,person_id,risk,looking_around,face_covered_or_turned,has_hat,has_mask
+b0e93db4-e7ac-44f1-9f92-7902a11c8bbd,BEHAV_ACTION,7.7744333333333335,233,1,0.8999999999999999,False,True,False,False

@@ -1,0 +1,21 @@
+yolo_model: yolov8s.pt
+device: 0                 # GPU (use "cpu" if CUDA not working)
+conf_threshold: 0.25
+iou_threshold: 0.5
+
+person_class: "person"
+item_classes: ["backpack", "handbag", "suitcase", "book"]
+
+# One broad zone: bottom ~45% (from y=300 to y=540)
+shelf_zones:
+  - [[0, 300], [960, 300], [960, 540], [0, 540]]
+
+pos_zone: []
+exit_line: []
+
+nearby_distance_px: 140    # scaled from 1080p (200) → 540p (~140–160)
+dwell_window_s: 30
+revisit_min_gap_s: 3.0
+risk_threshold_watch: 0.70
+risk_threshold_action: 0.85
+fps_assume: 30

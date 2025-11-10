@@ -1,0 +1,12 @@
+{
+  "event_id": "b0e93db4-e7ac-44f1-9f92-7902a11c8bbd",
+  "type": "BEHAV_ACTION",
+  "timestamp_s": 7.7744333333333335,
+  "frame_idx": 233,
+  "person_id": 1,
+  "risk": 0.8999999999999999,
+  "looking_around": false,
+  "face_covered_or_turned": true,
+  "has_hat": false,
+  "has_mask": false
+}

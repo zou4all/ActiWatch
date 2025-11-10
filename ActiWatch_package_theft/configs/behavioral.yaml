@@ -1,0 +1,30 @@
+# configs/behavioral.yaml
+yolo_model: yolov8s.pt     # people/items detector (COCO)
+attr_model: ""             # OPTIONAL: YOLO model with classes like 'mask','helmet','hat' (leave "" if none)
+device: cpu                # 0 for GPU, or "cpu"
+
+conf_threshold: 0.25
+iou_threshold: 0.5
+
+person_class: "person"
+item_classes: ["backpack","handbag","suitcase","book","box"]   # include "box" if your parcels are boxes
+
+# Zones — leave empty to analyze the whole frame
+shelf_zones: []            # e.g., [[0,300],[960,300],[960,540],[0,540]] for 960x540 bottom area
+pos_zone: []               # optional
+
+# Proximity & timing
+nearby_distance_px: 200    # pixels; scale with your resolution
+fps_assume: 30
+
+# Behavioral thresholds
+face_scan_window: 20       # frames to compute head/face scan score
+scan_angle_thr_deg: 25.0   # average angle change (deg) considered "looking around"
+min_scan_hits: 4           # how many changes above thr inside window → flag “looking around”
+
+face_missing_window: 30    # frames; if face not visible for this long while near items → "face_covered_or_turned"
+face_visible_ratio_min: 0.25   # if face visible < 25% of the time in the window → suspicious
+
+# Risk thresholds
+risk_threshold_watch: 0.65
+risk_threshold_action: 0.85
